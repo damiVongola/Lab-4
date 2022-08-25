@@ -3,7 +3,7 @@ This is the fourth Lab for the class Introduction to Machine Learning DIT 45100 
 
 Install the following python packages needed for this Lab. I would advice that as practice for industry, you install these packages in a virtual environment.
 
-`pip install jupyterlab` `pip install matplotlib` `pip install keras` `pip install pandas` `pip install scikit-learn`
+`pip install jupyterlab` `pip install matplotlib` `pip install tensorflow` `pip install pandas` 
 
 You will be provided with some sample code in sample_code.ipynb that will provide you information that should be enough for you to complete the labs. The following tasks below are our objectives for the lab
 
