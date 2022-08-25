@@ -10,7 +10,7 @@ You will be provided with some sample code in sample_code.ipynb that will provid
 You will be implementing the following algorithms we discussed in class:
 
 - Classification with neural networks (100 marks)
-  - Download the cifar dataset
+  - Download the cifar dataset and split into training and test set
   - Sample and show examples from the dataset to ensure it is correct
   - Use feature scaling. This is most easily done by dividing the images by 255, which will effectively put your images in range [0, 1]
   
