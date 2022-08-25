@@ -37,7 +37,7 @@ You will be implementing the following algorithms we discussed in class:
         - Use validation_split of about 0.2 
         - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly) 
       - Plot the training accuracy against the validation accuracy
-      - Get the accuracy on the testing set <br>
+      - Get the accuracy and loss on the testing set <br>
      - ***Hint: You should be able to hit the following accuracies:<br>
        Your last training epoch should give you around 0.55 accuracy<br>
        Your last validation epoch should give you around 0.45 accuracy<br>
@@ -63,7 +63,7 @@ You will be implementing the following algorithms we discussed in class:
           - Use validation_split of about 0.2 
           - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly) 
         - Plot the training accuracy against the validation accuracy
-        - Get the accuracy on the testing set <br>
+        - Get the accuracy and loss on the testing set <br>
     - ***Hint: You should be able to hit the following accuracies:<br>
        Your last training epoch should give you around 0.74 accuracy<br>
        Your last validation epoch should give you around 0.50 accuracy<br>
@@ -92,7 +92,7 @@ You will be implementing the following algorithms we discussed in class:
         - Use validation_split of about 0.2 
         - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly) 
       - Plot the training accuracy against the validation accuracy
-      - Get the accuracy on the testing set <br>
+      - Get the accuracy and loss on the testing set <br>
      - ***Hint: You should be able to hit the following accuracies:<br>
        Your last training epoch should give you around 0.45 accuracy<br>
        Your last validation epoch should give you around 0.43 accuracy<br>
@@ -120,7 +120,7 @@ You will be implementing the following algorithms we discussed in class:
           - Use validation_split of about 0.2 
           - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly) 
         - Plot the training accuracy against the validation accuracy
-        - Get the accuracy on the testing set <br>
+        - Get the accuracy and loss on the testing set <br>
     - ***Hint: You should be able to hit the following accuracies:<br>
        Your last training epoch should give you around 0.50 accuracy<br>
        Your last validation epoch should give you around 0.48 accuracy<br>
