@@ -19,7 +19,7 @@ You will be implementing the following algorithms we discussed in class:
     - Testing with sigmoid: (25 marks)
       - Create model definition
         - Use tf.keras.layers.Flatten for the input layer 
-        - Use  Dense layers with sizes: [128, 64] respectively
+        - Use  Dense layers with sizes: [128, 64] respectively for hidden layers
           - Use glorot_uniform(xavier initialization) as kernel_initializer
           - Use zero initialization for biases
           - Use sigmoid as activation function
@@ -45,14 +45,14 @@ You will be implementing the following algorithms we discussed in class:
      - Testing with relu: (25 marks)
         - Create model definition
           - Use tf.keras.layers.Flatten for the input layer 
-          - Use  Dense layers with sizes: [128, 64] respectively
+          - Use  Dense layers with sizes: [128, 64] respectively for hidden layers
             - Use he_uniform as kernel_initializer
             - Use zero initialization for biases
-            - Use sigmoid as activation function
+            - Use relu as activation function
           - Use Dense layer with softmax activation for output layer with size 10
-            - Use he_uniform as kernel_initializer
+            - Use glorot_uniform(xavier initialization) as kernel_initializer
             - Use zero initialization for biases
-            - Use sigmoid as activation function
+            - Use softmax as activation function
         - Compile model
           - Use sgd as optimizer
             - Use learning rate of 0.01
@@ -72,7 +72,7 @@ You will be implementing the following algorithms we discussed in class:
     - Testing with sigmoid: (25 marks)
       - Create model definition
         - Use tf.keras.layers.Flatten for the input layer 
-        - Use  Dense layers with sizes: [128, 64] respectively
+        - Use  Dense layers with sizes: [128, 64] respectively for hidden layers
           - Use glorot_uniform(xavier initialization) as kernel_initializer
           - Use zero initialization for biases
           - Use sigmoid as activation function
@@ -80,7 +80,7 @@ You will be implementing the following algorithms we discussed in class:
         - Use Dense layer with softmax activation for output layer with size 10
           - Use glorot_uniform(xavier initialization) as kernel_initializer
           - Use zero initialization for biases
-          - Use sigmoid as activation function
+          - Use softmax as activation function
           - Use L2 regularization with weight of 0.001
       - Compile model
         - Use sgd as optimizer
@@ -100,15 +100,15 @@ You will be implementing the following algorithms we discussed in class:
      - Testing with relu: (25 marks)
         - Create model definition
           - Use tf.keras.layers.Flatten for the input layer 
-          - Use  Dense layers with sizes: [128, 64] respectively
+          - Use  Dense layers with sizes: [128, 64] respectively for hidden layers
             - Use he_uniform as kernel_initializer
             - Use zero initialization for biases
             - Use relu as activation function
             - Use L2 regularization with weight of 0.005
           - Use Dense layer with softmax activation for output layer with size 10
-            - Use he_uniform(xavier initialization) as kernel_initializer
+            - Use glorot_uniform(xavier initialization) as kernel_initializer
             - Use zero initialization for biases
-            - Use relu as activation function
+            - Use softmax as activation function
             - Use L2 regularization with weight of 0.005
         - Compile model
           - Use sgd as optimizer
