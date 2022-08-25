@@ -12,66 +12,118 @@ You will be implementing the following algorithms we discussed in class:
 - Classification with neural networks (100 marks)
   - Download the cifar dataset
   - Sample and show examples from the dataset to ensure it is correct
-  - Implement algorithms i.e: Using python libraries.
   - Use feature scaling. This is most easily done by dividing the images by 255, which will effectively put your images in range [0, 1]
   
-  - Use tf.Keras to build a fully connected network (without regularization) 
+  - Use tf.Keras to build a fully connected network ***(without regularization)*** 
     
-    - Use sigmoid activation function for hidden layers: (25 marks)
-      - Use tf.keras.layers.Flatten for the input layer 
-      - Use  dense layers with sizes: [128, 64] respectively
-      - Use 1 Softmax output layer with size 10
-      - Use sgd to train the network
-        - Use learning rate of 1
-        - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly)
-        - Use validation_split of about 0.2
-        - Plot the training accuracy against the validation accuracy
-        - Get the accuracy on the testing set
-        Hint: You should be able to hit accuracy above 0.40 on the training, validation and test set
-        
-    - Use relu activation function for hidden layers: (25 marks)
-      - Use  dense layers with sizes: [128, 64] respectively
-      - Use 1 Softmax output layer with size 10
-      - Use sgd to train the network
-        - Use learning rate of 1
-        - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly)
-        - Use validation_split of about 0.2
-        - Plot the training accuracy against the validation accuracy
-        - Get the accuracy on the testing set
-        Hint: You should be able to hit accuracy above 0.50 on the training, validation and test set 
-   
-  - Use tf.Keras to build a fully connected network (with regularization) 
-    - Use sigmoid activation function for hidden layers: (25 marks)
-      - Use tf.keras.layers.Flatten for the input layer
-      - Use  dense layers with sizes: [128, 64] respectively
-        - Use regularization on all dense layers  
-        - Use glorot_uniform initialization for weights
-        - Use zero initialization for biases
-      - Use 1 Softmax output layer with size 10
-      - Use sgd to train the network
-        - Use learning rate of 1
-        - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly)
-        - Use validation_split of about 0.2
-        - You should be able to hit accuracy above 0.40 on the training, validation and test set 
-      - You should be able to hit accuracy above 0.40 on the training, validation and test set 
+    - Testing with sigmoid: (25 marks)
+      - Create model definition
+        - Use tf.keras.layers.Flatten for the input layer 
+        - Use  Dense layers with sizes: [128, 64] respectively
+          - Use glorot_uniform(xavier initialization) as kernel_initializer
+          - Use zero initialization for biases
+          - Use sigmoid as activation function
+        - Use Dense layer with softmax activation for output layer with size 10
+          - Use glorot_uniform(xavier initialization) as kernel_initializer
+          - Use zero initialization for biases
+          - Use softmax as activation function
+      - Compile model
+        - Use sgd as optimizer
+          - Use learning rate of 0.01
+        - Use SparseCategoricalCrossentropy(log loss) as loss
+        - Use accuracy as metric
+      - Fit model
+        - Use validation_split of about 0.2 
+        - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly) 
       - Plot the training accuracy against the validation accuracy
-      - Get the accuracy on the testing set
+      - Get the accuracy on the testing set <br>
+     - ***Hint: You should be able to hit the following accuracies:<br>
+       Your last training epoch should give you around 0.55 accuracy<br>
+       Your last validation epoch should give you around 0.45 accuracy<br>
+       Your testing set should give you 0.45 accuracy***<br>
    
-    - Use relu activation function for hidden layers: (25 marks)
-      - Use tf.keras.layers.Flatten for the input layer
-      - Use  dense layers with sizes: [128, 64] respectively
-        - Use regularization on all dense layers  
-        - Use he_initialization for weights
-        - Use zero initialization for biases
-      - Use 1 Softmax output layer with size 10
-      - Use sgd to train the network
-        - Use learning rate of 1
-        - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly)
-        - Use validation_split of about 0.2
-        - You should be able to hit accuracy above 0.40 on the training, validation and test set 
-      - You should be able to hit accuracy above 0.40 on the training, validation and test set 
+     - Testing with relu: (25 marks)
+        - Create model definition
+          - Use tf.keras.layers.Flatten for the input layer 
+          - Use  Dense layers with sizes: [128, 64] respectively
+            - Use he_uniform as kernel_initializer
+            - Use zero initialization for biases
+            - Use sigmoid as activation function
+          - Use Dense layer with softmax activation for output layer with size 10
+            - Use he_uniform as kernel_initializer
+            - Use zero initialization for biases
+            - Use sigmoid as activation function
+        - Compile model
+          - Use sgd as optimizer
+            - Use learning rate of 0.01
+          - Use SparseCategoricalCrossentropy(log loss) as loss
+          - Use accuracy as metric
+        - Fit model
+          - Use validation_split of about 0.2 
+          - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly) 
+        - Plot the training accuracy against the validation accuracy
+        - Get the accuracy on the testing set <br>
+    - ***Hint: You should be able to hit the following accuracies:<br>
+       Your last training epoch should give you around 0.74 accuracy<br>
+       Your last validation epoch should give you around 0.50 accuracy<br>
+       Your testing set should give you 0.50 accuracy***<br>
+   
+  - Use tf.Keras to build a fully connected network ***(with regularization)***
+    - Testing with sigmoid: (25 marks)
+      - Create model definition
+        - Use tf.keras.layers.Flatten for the input layer 
+        - Use  Dense layers with sizes: [128, 64] respectively
+          - Use glorot_uniform(xavier initialization) as kernel_initializer
+          - Use zero initialization for biases
+          - Use sigmoid as activation function
+          - Use L2 regularization with weight of 0.001
+        - Use Dense layer with softmax activation for output layer with size 10
+          - Use glorot_uniform(xavier initialization) as kernel_initializer
+          - Use zero initialization for biases
+          - Use sigmoid as activation function
+          - Use L2 regularization with weight of 0.001
+      - Compile model
+        - Use sgd as optimizer
+          - Use learning rate of 0.01
+        - Use SparseCategoricalCrossentropy(log loss) as loss
+        - Use accuracy as metric
+      - Fit model
+        - Use validation_split of about 0.2 
+        - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly) 
       - Plot the training accuracy against the validation accuracy
-      - Get the accuracy on the testing set
+      - Get the accuracy on the testing set <br>
+     - ***Hint: You should be able to hit the following accuracies:<br>
+       Your last training epoch should give you around 0.45 accuracy<br>
+       Your last validation epoch should give you around 0.43 accuracy<br>
+       Your testing set should give you 0.43 accuracy***<br>
+   
+     - Testing with relu: (25 marks)
+        - Create model definition
+          - Use tf.keras.layers.Flatten for the input layer 
+          - Use  Dense layers with sizes: [128, 64] respectively
+            - Use he_uniform as kernel_initializer
+            - Use zero initialization for biases
+            - Use relu as activation function
+            - Use L2 regularization with weight of 0.005
+          - Use Dense layer with softmax activation for output layer with size 10
+            - Use he_uniform(xavier initialization) as kernel_initializer
+            - Use zero initialization for biases
+            - Use relu as activation function
+            - Use L2 regularization with weight of 0.005
+        - Compile model
+          - Use sgd as optimizer
+            - Use learning rate of 0.01
+          - Use SparseCategoricalCrossentropy(log loss) as loss
+          - Use accuracy as metric
+        - Fit model
+          - Use validation_split of about 0.2 
+          - Train for 100 epochs (Training will take approximately 7 minutes to train so prepare accordingly) 
+        - Plot the training accuracy against the validation accuracy
+        - Get the accuracy on the testing set <br>
+    - ***Hint: You should be able to hit the following accuracies:<br>
+       Your last training epoch should give you around 0.50 accuracy<br>
+       Your last validation epoch should give you around 0.48 accuracy<br>
+       Your testing set should give you 0.48 accuracy***<br>
  
  
    
